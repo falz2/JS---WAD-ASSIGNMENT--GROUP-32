@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="brand">🛒 </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart <span id="cart-count">0</span></a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <h1 class="page-title">Checkout</h1>
+
+  <div class="checkout-wrapper">
+
+    <!-- LEFT SIDE: ORDER SUMMARY -->
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div id="checkout-items"></div>
+      <div id="order-total"></div>
+    </div>
+
+    <!-- RIGHT SIDE: DELIVERY FORM -->
+    <div class="checkout-form">
+      <h2>Delivery Details</h2>
+
+      <label>Full Name</label>
+      <input type="text" id="full-name" placeholder="NAME" />
+      <span class="error" id="error-name"></span>
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="faizal@email.com" />
+      <span class="error" id="error-email"></span>
+
+      <label>Phone</label>
+      <input type="tel" id="phone" placeholder="+256 700 000000" />
+      <span class="error" id="error-phone"></span>
+
+      <label>Address</label>
+      <textarea id="address" rows="3" placeholder="Kampala, Uganda"></textarea>
+      <span class="error" id="error-address"></span>
+
+      <button id="place-order-btn">Place Order</button>
+
+      <!-- SUCCESS MESSAGE ( it is hidden until order is placed) -->
+      <div id="order-success" class="hidden">
+        <h3> Order Placed!</h3>
+        <p>Thank you! A confirmation will be sent to your email.</p>
+        <a href="index.html">Continue Shopping</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

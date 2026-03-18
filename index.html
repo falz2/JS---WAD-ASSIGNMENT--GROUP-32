@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="brand">🛒 </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart <span id="cart-count">0</span></a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADING -->
+  <h1 class="page-title">Our Products</h1>
+
+  <!-- SEARCH BAR -->
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Search products..." />
+  </div>
+
+  <!-- CATEGORY FILTER BUTTONS -->
+  <div class="filters">
+    <button class="filter-btn active" data-category="All">All</button>
+    <button class="filter-btn" data-category="Facial">Facial</button>
+    <button class="filter-btn" data-category="Fashion">Fashion</button>
+    <button class="filter-btn" data-category="Niche">Niche</button>
+  </div>
+
+  <!-- PRODUCTS DISPLAY AREA -->
+  <div id="product-grid"></div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

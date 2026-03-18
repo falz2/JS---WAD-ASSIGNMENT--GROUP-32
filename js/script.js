@@ -91,7 +91,7 @@ function showToast(msg) {
 
 
 // ================================================================
-// HOME PAGE  –  show products, search, filter by category
+// HOME PAGE  –  showing products, search, filter by category
 // ================================================================
 
 // Draw product cards on screen

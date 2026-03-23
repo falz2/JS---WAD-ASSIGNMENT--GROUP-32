@@ -62,7 +62,7 @@ function getCart() {
   }
 }
 
-// Save cart to localStorage
+// Save cart to localStorage in the browser such that when a user refreshes the page , data isnt lost
 function saveCart(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
@@ -86,7 +86,7 @@ function showToast(msg) {
   if (!toast) return;
   toast.textContent = msg;
   toast.classList.add("show");
-  setTimeout(function() { toast.classList.remove("show"); }, 2500);
+  setTimeout(function() { toast.classList.remove("show"); }, 1500);
 }
 
 
@@ -94,7 +94,7 @@ function showToast(msg) {
 // HOME PAGE  –  showing products, search, filter by category
 // ================================================================
 
-// Draw product cards on screen
+// Draw product cards on the home page which makes the website dynamic
 function renderProducts(list) {
   var grid = document.getElementById("product-grid");
   if (!grid) return;

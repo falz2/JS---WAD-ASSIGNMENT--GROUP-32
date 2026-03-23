@@ -219,7 +219,7 @@ function renderCartPage() {
   cart.forEach(function(item) {
     var div = document.createElement("div");
     div.className = "cart-item";
-
+//inner html helps to add items in our cards 
     div.innerHTML =
       '<img src="' + item.image + '" alt="' + item.name + '" class="cart-img" />' +
       '<div class="item-info">' +
@@ -254,7 +254,7 @@ function changeQty(productId, delta) {
   var cart = getCart();
   var item = cart.find(function(i) { return i.id === productId; });
   if (!item) return;
-
+// delta function helps to manipulate whether the user wants to add or subtract qtny of a certain product
   item.quantity += delta;
 
   // If quantity drops to 0, remove the item completely
@@ -274,7 +274,7 @@ function removeItem(productId) {
   saveCart(updated);
   updateBadge();
   renderCartPage();
-  showToast("🗑️ Item removed");
+  showToast("🗑️ Item removed successfully");
 }
 
 

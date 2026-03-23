@@ -338,7 +338,7 @@ function validateForm() {
   var email   = document.getElementById("email").value.trim();
   var phone   = document.getElementById("phone").value.trim();
   var address = document.getElementById("address").value.trim();
-
+//checking form validity
   check("full-name", "error-name",    name    !== "",                             "Name is required.");
   check("email",     "error-email",   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email),  "Enter a valid email.");
   check("phone",     "error-phone",   /^[+\d\s\-()]{7,}$/.test(phone),           "Enter a valid phone number.");
@@ -373,7 +373,7 @@ function initCheckoutPage() {
     fields.forEach(function(el) { el.style.display = "none"; });
     btn.style.display = "none";
 
-    document.getElementById("order-success").classList.remove("hidden");
+    document.getElementById("order-successfull").classList.remove("hidden");
 
     // Clear the cart after successful order
     saveCart([]);
